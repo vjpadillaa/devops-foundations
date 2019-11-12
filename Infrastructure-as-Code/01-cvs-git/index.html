@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Git demo y Laboratorio - Devops Foundations Devops.gt</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Git demo y Laboratorio";
+    var mkdocs_page_input_path = "Infrastructure-as-Code/01-cvs-git.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Devops Foundations Devops.gt</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Infrastructure-as-Code</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../labs/">Labs</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../cvs-git.md">Git</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Devops Foundations Devops.gt</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Git demo y Laboratorio</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="git-demo-y-laboratorio">Git demo y Laboratorio</h1>
+<h2 id="prerrequisitos">Prerrequisitos</h2>
+<ul>
+<li>Instalacion de git en el sistema <a href="https://git-scm.com/book/es/v1/Empezando-Instalando-Git">Tutorial de Instalacion</a></li>
+<li>Una cuenta de github configurada <a href="https://github.com/join">Configuracion de cuenta de Git</a></li>
+</ul>
+<h2 id="laboratorio-git">Laboratorio-Git</h2>
+<ol>
+<li>
+<p>Antes de Usar git para este laboratorio, necesita configurar su cuenta de git utilizando el siguiente comando <code>git config --global user.name "&lt;Nombre de Usuario&gt;"</code></p>
+</li>
+<li>
+<p>Agregue a la configuración de git su dirección de correo <code>git config --global user.email "&lt;Micorreo@midominio.com&gt;"</code></p>
+</li>
+<li>Ingrese a su cuenta de git <a href="https://github.com">https://github.com</a></li>
+<li>Ingrese al link de este repositorio <a href="https://github.com/DouglasLopez/devops-foundations">Repo URL</a></li>
+<li>Haga click en "Fork" para crear una copia de este repositorio dentro de su cuenta de Github.</li>
+<li>Haga clic en "Clone or Download" para obtener la dirección de https para el repositorio recientemente creado.</li>
+<li>Clone el repositorio usando el comando <code>git clone &lt;HTTPS URL del paso previo&gt;</code></li>
+<li>Ingrese al directorio donde ha clonado el repositorio y use el comando <code>ls -la</code></li>
+<li>Observe el directorio <code>.git</code> este directorio contiene toda la información del control de versiones, esta es su copia local del mismo.</li>
+<li>Corra el comando <code>git log</code> y podrá observar el historial de todos los cambios</li>
+<li>Corra el comando <code>git remote</code> para ver la lista de repositorios remotos asociados a su copia local</li>
+<li>Corra el comando <code>git remote -v</code> para ver información más detallada acerca de el repositorio remoto</li>
+<li>Cree un nuevo archivo <code>mi_archivo.txt</code>. y el comando <code>echo "este es un archivo nuevo"&gt; mi_archivo.txt</code></li>
+<li>Con el comando <code>git status</code> puede ver el estado actual de su repositorio el archivo <code>mi_archivo.txt</code> aparecer como <code>untracked</code></li>
+<li>Agregue su archivo al cvs con el comando <code>git add mi_archivo.txt</code></li>
+<li>Corra el comando <code>git commit</code> para agregar sus cambios al repositorio estos cambios estaran almacenados solamente en su copia local</li>
+<li>Para agregar sus cambios al repositorio remoto corra el comando <code>git push origin master</code></li>
+<li>Verifique en su cuenta de github si el cambio se ve reflejado en el repositorio</li>
+</ol>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>
